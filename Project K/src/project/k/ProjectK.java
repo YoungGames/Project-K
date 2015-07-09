@@ -1,7 +1,6 @@
 
 package project.k;
 
-import java.awt.PopupMenu;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -10,13 +9,16 @@ import javax.swing.JTextField;
 
 
 public class ProjectK {
-
+    
+    public static String nameOfUser = null;
     
     public static void main(String[] args) {
         
         
         //URL firstpicturename = ProjectK.class.getResource("/textures/Picturename.png");
         //Icon secondpicturename = new ImageIcon(firstpicturename);
+        
+        
         
         int newgame = 1;
         
@@ -29,6 +31,7 @@ public class ProjectK {
         
         //create welcome frame
         if(newgame == 1) {
+            boolean namesaved = false;
             JTextField name = new JTextField();
             name.setSize(200, 20);
             name.setLocation(100, 180);
@@ -50,12 +53,33 @@ public class ProjectK {
             Name.setVisible(true);
             save.setVisible(true);
             startframe.setVisible(true);
+            
+            while(true) {
+                if(namesaved == true) {
+                    startframe.setName(nameOfUser);
+                    startframe.setVisible(false);
+                    name.setVisible(false);
+                    Name.setVisible(false);
+                    break;
+                }
+            }   
         }
-        System.out.println(newgame);
+        startframe.setSize(800, 800);
     }
     
     public static int checkfornewgame(int newgame) {
         //search for savegame
         return newgame;
     }
+    
+    //save the game / create a savegame
+    public static void save() {
+        
+    }
+    
+    //load savegame
+    public static void load() {
+        
+    }
+    
 }
