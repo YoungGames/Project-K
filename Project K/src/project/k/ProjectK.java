@@ -1,6 +1,9 @@
-
 package project.k;
 
+
+
+
+import project.k.cards.card_dragon;
 import java.net.URL;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -15,7 +18,7 @@ public class ProjectK {
     
     public static String nameOfUser = null;
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         
         
         //URL firstpicturename = ProjectK.class.getResource("/textures/Picturename.png");
@@ -112,5 +115,5 @@ public class ProjectK {
     public static void load() {
         
     }
-    
 }
+
