@@ -1,6 +1,10 @@
 package project.k.cards;
 
+import java.awt.Component;
+import java.net.URL;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import project.k.ProjectK;
 
 
 public class card_dragon {
@@ -11,10 +15,13 @@ public class card_dragon {
     public double max_live = 100;
     public double attack = 20;
     public double shield = 5;
+    private JLabel dragon;
     
     public static void dragon() {
+        URL card_dragon_ = ProjectK.class.getResource("/textures/xp.png");
+        ImageIcon card_dragon = new ImageIcon(card_dragon_);
         JLabel dragon = new JLabel();
-        dragon.setSize(20, 50);
+        dragon.setIcon(card_dragon);
         
     }
 
@@ -42,5 +49,9 @@ public class card_dragon {
     
     public void setMaxLive() {
         live = max_live;
+    }
+    
+    public Component getLabel() {
+        return dragon;
     }
 }
